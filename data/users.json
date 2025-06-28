@@ -1,7 +1,7 @@
 [
     {
         "username": "admin1",
-        "password": "scrypt:32768:8:1$FgNeJyCtolc6PHdn$1c527374209d838b528119bf0a87ba5e20c28b1c032e4f64642c9137c0c0f0382b162df67b3bbe85525c58961ea1e07be656e1764cdda2bae79c2548f455795e",
+        "password": "scrypt:32768:8:1$d1tjxP0WLAbjn49z$39d566d3b5c04b543bac98f6b049b3048e792c30d7fa2081c90bbf8cc4c02b09f3b968caef492b6c8f77f0c95144b8f0dd668b259ad55869aade3abbd1592081",
         "is_admin": true
     },
     {

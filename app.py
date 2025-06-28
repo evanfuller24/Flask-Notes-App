@@ -261,9 +261,9 @@ def change_password():
         save_users(users)
 
         flash('Your password has been updated successfully!', 'success')
-        return redirect(url_for('dashboard'))
+        return render_template('change_password.html')
 
-    return render_template('change_password.html')
+    return render_template('change_password.html', success=True)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
