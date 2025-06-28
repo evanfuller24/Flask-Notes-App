@@ -3,6 +3,8 @@ import json
 import os
 from datetime import datetime
 from uuid import uuid4
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask import flash
 
 app = Flask(__name__)
 app.secret_key = '9e440d6adb2f3edabd5086bf91549ccb'
@@ -63,12 +65,13 @@ def login():
         username = request.form['username']
         password = request.form['password']
         user = get_user(username)
-        if user and user['password'] == password:
+        if user and check_password_hash(user['password'], password):
             session['username'] = username
             return redirect(url_for('dashboard'))
         else:
             return render_template('login.html', error="Invalid username or password")
     return render_template('login.html')
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -85,16 +88,14 @@ def register():
 
         new_user = {
             'username': username,
-            'password': password,
-            'is_admin': False  # Force guest account
+            'password': generate_password_hash(password),  # HASHING here!
+            'is_admin': False
         }
 
         users.append(new_user)
         save_users(users)
 
         return redirect(url_for('login'))
-
-    return render_template('register.html')
 
 @app.route('/logout')
 def logout():
@@ -207,36 +208,6 @@ def delete_note(note_id):
     save_notes(notes)
     return redirect(url_for('dashboard'))
 
-@app.route('/admin/upload-data', methods=['GET', 'POST'])
-def upload_data():
-    if request.method == 'POST':
-        users_content = request.form.get('users')
-        notes_content = request.form.get('notes')
-
-        try:
-            if users_content:
-                users = json.loads(users_content)
-                save_users(users)
-
-            if notes_content:
-                notes = json.loads(notes_content)
-                save_notes(notes)
-
-            return "Data uploaded successfully."
-
-        except Exception as e:
-            return f"Error: {str(e)}", 400
-
-    return '''
-        <form method="POST">
-            <h2>Upload users.json</h2>
-            <textarea name="users" rows="10" cols="50"></textarea><br><br>
-            <h2>Upload notes.json</h2>
-            <textarea name="notes" rows="10" cols="50"></textarea><br><br>
-            <button type="submit">Upload</button>
-        </form>
-    '''
-
 @app.route('/note/<note_id>')
 def view_note(note_id):
     username = session.get('username')
@@ -256,6 +227,43 @@ def view_note(note_id):
     note['formatted_date'] = dt.strftime('%B %d, %Y')
 
     return render_template('view_note.html', note=note)
+
+@app.route('/change_password', methods=['GET', 'POST'])
+def change_password():
+    username = session.get('username')
+    if not username:
+        return redirect(url_for('login'))
+
+    users = load_users()
+    user = next((u for u in users if u['username'] == username), None)
+    if not user:
+        flash('User not found.', 'error')
+        return redirect(url_for('login'))
+
+    if request.method == 'POST':
+        current_password = request.form.get('current_password', '')
+        new_password = request.form.get('new_password', '')
+        confirm_password = request.form.get('confirm_password', '')
+
+        if not check_password_hash(user['password'], current_password):
+            flash('Current password is incorrect.', 'error')
+            return redirect(url_for('change_password'))
+
+        if new_password != confirm_password:
+            flash('New passwords do not match.', 'error')
+            return redirect(url_for('change_password'))
+
+        if len(new_password) < 6:
+            flash('New password must be at least 6 characters long.', 'error')
+            return redirect(url_for('change_password'))
+
+        user['password'] = generate_password_hash(new_password)
+        save_users(users)
+
+        flash('Your password has been updated successfully!', 'success')
+        return redirect(url_for('dashboard'))
+
+    return render_template('change_password.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

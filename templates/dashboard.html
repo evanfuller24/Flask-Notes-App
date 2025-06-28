@@ -165,9 +165,19 @@
     <div class="container">
         <div class="header">
             <h1>Welcome, {{ username }}!</h1>
-            <div>
-                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
-            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+            <a href="{{ url_for('change_password') }}" title="Change Password"
+               style="text-decoration: none; color: #007BFF; font-weight: bold; font-size: 14px; display: flex; align-items: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#007BFF" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" width="20" height="20" viewBox="0 0 24 24"
+                     style="margin-right: 6px;">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+                    <path d="M6 20c0-2.21 3.58-4 6-4s6 1.79 6 4v1H6v-1z" />
+                </svg>
+                Profile
+            </a>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        </div>
         </div>
 
         <div class="top-actions">
