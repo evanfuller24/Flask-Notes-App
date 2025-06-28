@@ -36,14 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     rows = rows.filter(row => row.style.display !== "none");
 
     rows.sort((a, b) => {
+      let dateCellIndex = authorInput ? 2 : 1;
+
       if (sortValue === "newest" || sortValue === "oldest") {
-        // Date is in the third or second column depending on admin
-        // Find the date cell index
-        let dateCellIndex = 2;
-        if (authorInput) {
-          // If author input exists, author is 2nd, date is 3rd
-          dateCellIndex = 3;
-        }
         const dateA = new Date(a.cells[dateCellIndex].textContent);
         const dateB = new Date(b.cells[dateCellIndex].textContent);
 
