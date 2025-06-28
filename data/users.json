@@ -1,0 +1,22 @@
+[
+    {
+        "username": "admin1",
+        "password": "scrypt:32768:8:1$FgNeJyCtolc6PHdn$1c527374209d838b528119bf0a87ba5e20c28b1c032e4f64642c9137c0c0f0382b162df67b3bbe85525c58961ea1e07be656e1764cdda2bae79c2548f455795e",
+        "is_admin": true
+    },
+    {
+        "username": "guest",
+        "password": "scrypt:32768:8:1$xeEfgx9rK9icgUou$f42dd1995ddd89c4e77254e50b2a81d1bcdce87561964b9c4697a5c5b8ccd97761234ec54db7e469ff9befa8323447676bd4166b5a4d905e200b5e677e05005a",
+        "is_admin": false
+    },
+    {
+        "username": "Evan",
+        "password": "scrypt:32768:8:1$bPnQlyX6Cuure8s7$93de932818d8cff970f188ec2a86e750486ab0ea78a544cdfeb3e6673fdadfc3ad2b5922b8b5ef05369e4dfa4f2595f6d628045e19ae9df37a316554571e3383",
+        "is_admin": false
+    },
+    {
+        "username": "Russian Revolution",
+        "password": "scrypt:32768:8:1$Ft9IqybXQ4BQK8wI$c401ecd001633793bb48fbda0ae3efbc73cbcf4eb410fcd653e3fbe990db995ca84235fd364f66f3f82e74a473574c96ee63bd5d278e306967753169f7a4406f",
+        "is_admin": false
+    }
+]

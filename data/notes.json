@@ -1,0 +1,58 @@
+[
+    {
+        "id": "18687bf3-4b55-4b23-bcea-91f42f18387d",
+        "username": "admin1",
+        "title": "AZ",
+        "content": "Arizona State",
+        "created_at": "2025-06-18T18:47:33.643064"
+    },
+    {
+        "id": "58401ae1-df67-4149-aef2-cee459092fea",
+        "username": "guest",
+        "title": "Guessed",
+        "content": "You guest it",
+        "created_at": "2025-06-18T21:47:47.934313"
+    },
+    {
+        "id": "6462b68a-18b9-4e41-9f48-a1e7d6c5b67e",
+        "username": "Evan",
+        "title": "Water Bottle",
+        "content": "I have a Knights water bottle that says Fuller on it.",
+        "created_at": "2025-06-20T22:43:31.453344"
+    },
+    {
+        "id": "468ec8b5-5a4b-4381-9ec6-6d063cf1bf71",
+        "username": "Russian Revolution",
+        "title": "1905: The Foreshock",
+        "content": "University riots in Moscow, Petrograd, Warsaw, Kiev\r\nPlehve blamed Jews for the revolutionary tension\r\nPlehve assassinated with bomb\r\nRussia lost a war to Japan, first European power to lose to Asia\r\nBloody Sunday happened where 40 people killed by police, but hundreds more in other massacres\r\nHundreds of thousands of workers striking\r\nUnion of Unions was the main one\r\nThe October Manifesto was the result of all this, created the Duma which didn't have any real power over the monarchy\r\nHowever, some constitutional reforms were also made moving away from full autocracy",
+        "created_at": "2025-06-21T00:21:41.852217"
+    },
+    {
+        "id": "f866f102-2fc5-4a37-9bef-86de22592972",
+        "username": "Russian Revolution",
+        "title": "Official Russia",
+        "content": "The Autocrat was ruler\r\nRussian peasants didn't want civil and political rights, they wanted a strong Russia\r\nIn 19th century, weak autocrats were succeeded by strong ones, and strong autocrats by weak ones\r\nNicholas II displayed signs of being one of the weak ones\r\nThe Judiciary in Russia had independent decision making from the autocrat, began 1864\r\nMinistry of Interior was the most important\r\nRussia had remarkable industrial growth from 1890 - 1900\r\nTheir army is what made Russia a great European power\r\n1861 emancipation split land ownership 50/50 between dvoriane and serfs\r\nThe Church was cultural link for 80 million in Russia\r\nThe Church was financially dependent on the government",
+        "created_at": "2025-06-21T00:22:03.591878"
+    },
+    {
+        "id": "47f59c7c-d0b1-4568-8ad2-18e7d2ac8fc4",
+        "username": "Russian Revolution",
+        "title": "Rural Russia",
+        "content": "Peasants were 4/5 of Russians\r\nGovernment influence on rural Russians was minimal\r\nThe household was the base of rural Russia\r\nIndividual households were rare, most were in villages\r\n61.8% of the arable land was owned by peasants communally or privately\r\nOn the eve of the 1917 revolution it had increased to 9/10\r\nPre-emancipation the land was cultivated half by the landlord and the other half by the serf\r\nPost-emancipation when property lines were drawn, serfs lost rights to graze cattle, and gather lumber\r\nOnly 2 out of 15 million sq. km were arable in Russia\r\nPeasants' lives were self sufficient and self contained\r\nRussian peasants were not concerned with the world outside of their village and neighboring villages\r\nThe peasant didn't regard serfdom as intolerable and unjust\r\nThey identified with and were proud of their masters\r\n\"We are yours, but the land is ours\", was often quoted\r\nGrowing literacy that was unused contributed to the restlessness of the lower class",
+        "created_at": "2025-06-21T00:23:08.266099"
+    },
+    {
+        "id": "f618e314-57e4-4513-97a6-a232e1414998",
+        "username": "Russian Revolution",
+        "title": "The Intelligentsia",
+        "content": "Intelligentsia are social activists, intellectuals\r\nThey were opposition to Tsarism\r\nBelieved some kind of determinism, where peasants' ideologies were merely a result of their surroundings\r\nBelieved in changing the surroundings of peasants, via legislation for a new order (opinion-molding)\r\nIntelligentsia held comparable ideas to the Jacobins that fueled the French Revolution\r\nTrotsky believed they were making a new, heightened, human being\r\nBelieved they were part of a higher historical purpose which justified the violence\r\nMaterialism, utilitarianism, and positivism were the ideologies of the Intelligentsia\r\nThe Intelligentsia believed they had the right to decide what was good for the peasants\r\nSocialist Revolutionaries divided the people into two groups: Exploiters and Exploited",
+        "created_at": "2025-06-21T00:23:41.150676"
+    },
+    {
+        "id": "6d9f9b32-f6ff-4bd2-afd0-43b1719dafba",
+        "username": "Russian Revolution",
+        "title": "The Constitutional Experiment",
+        "content": "For the first time in the hundreds of years of monarchy the Duma had some (very limited) power\r\nStolypin was the PM and Minister of Interior\r\nPlayed a major role in calming things down after the 1905 rev.\r\nMany attempts on Stolypin's life occurred\r\nTried to combat terror with death sentences (\"Stolypin Neckties\")\r\nHe took repressive measures against acts of terror, nearly 1000 death sentences were carried out in 1907\r\nPrivate land ownership was controversial\r\nMost peasants owned land communally within their village\r\nStolypin wanted to peasants to move east and cultivate land privately\r\nStolypin was not a revolutionary, he was a reformer\r\nHe believed in a strong monarch\r\nThe successfulness of Stolypin's land reforms is controversial\r\nThis is because many peasants didn't want to leave their communal villages, opposed the idea of private property\r\nHe was disliked by so many because he supported the monarchy, while also fighting for reform. So both sides resented him\r\nIn 1911 Stolypin was assassinated by a 24-year old wealthy Jew",
+        "created_at": "2025-06-24T20:48:48.016349"
+    }
+]
