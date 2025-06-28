@@ -207,6 +207,36 @@ def delete_note(note_id):
     save_notes(notes)
     return redirect(url_for('dashboard'))
 
+@app.route('/admin/upload-data', methods=['GET', 'POST'])
+def upload_data():
+    if request.method == 'POST':
+        users_content = request.form.get('users')
+        notes_content = request.form.get('notes')
+
+        try:
+            if users_content:
+                users = json.loads(users_content)
+                save_users(users)
+
+            if notes_content:
+                notes = json.loads(notes_content)
+                save_notes(notes)
+
+            return "Data uploaded successfully."
+
+        except Exception as e:
+            return f"Error: {str(e)}", 400
+
+    return '''
+        <form method="POST">
+            <h2>Upload users.json</h2>
+            <textarea name="users" rows="10" cols="50"></textarea><br><br>
+            <h2>Upload notes.json</h2>
+            <textarea name="notes" rows="10" cols="50"></textarea><br><br>
+            <button type="submit">Upload</button>
+        </form>
+    '''
+
 @app.route('/note/<note_id>')
 def view_note(note_id):
     username = session.get('username')
